@@ -1,0 +1,25 @@
+import processing.pdf.*;
+
+void setup() {
+  size(700, 700);
+  background(15);
+  noFill();
+  stroke (250, 40);
+  strokeWeight(1);
+  beginRecord(PDF, "everything.pdf");
+}
+
+
+void draw() {
+  float t = (float) frameCount;
+  translate(width/2, height/2);
+  rotate(t/313); 
+  ellipse(cos(t/21), sin(t/80), cos(t/210.39685)*500, sin(t/18.23464)*500);
+}
+
+void keyPressed() {
+  if (key == 'q') {
+    endRecord();
+    exit();
+  }
+}
