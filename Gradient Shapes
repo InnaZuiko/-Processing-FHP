@@ -1,0 +1,27 @@
+//Gradient Shapes
+// Inna Ziuko
+// By clicking the mouse you add some circles
+
+
+float xLocation, yLocation=0;
+
+void setup(){
+  frameRate(50);
+  size(500,500);
+  background(255,255,255);
+  stroke(255,255,255,255);
+}
+
+void draw(){
+  xLocation=random(550);
+  yLocation=random(500);
+  
+  fill(0,xLocation,yLocation,50);
+  rect(xLocation,yLocation,yLocation/5,xLocation/5);
+ 
+}
+
+void mousePressed() {
+  fill(0,xLocation,yLocation,50);
+  ellipse(xLocation,yLocation,yLocation/5,xLocation/5);
+}
